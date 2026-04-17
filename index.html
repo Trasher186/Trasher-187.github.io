@@ -379,6 +379,47 @@
       margin-bottom: 1.5rem;
       line-height: 1.8;
     }
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      text-align: left;
+    }
+    .contact-method {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem;
+      background: rgba(0, 229, 160, 0.05);
+      border: 1px solid rgba(0, 229, 160, 0.2);
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .contact-method:hover {
+      background: rgba(0, 229, 160, 0.1);
+      border-color: rgba(0, 229, 160, 0.4);
+    }
+    .contact-method-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .contact-method-value {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 500;
+      word-break: break-all;
+    }
+    .contact-method-value a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-method-value a:hover {
+      color: #00ffb3;
+    }
     .contact-location {
       font-size: 0.75rem;
       color: var(--muted);
@@ -743,7 +784,44 @@
         Looking for a developer, designer, or creative tech partner?<br>
         I'm available for freelance projects — big or small.
       </p>
-      <a href="mailto:sherwin@email.com" class="btn btn-primary">Send Me a Message</a>
+      <div class="contact-methods">
+        <div class="contact-method">
+          <div class="contact-method-label">Email</div>
+          <div class="contact-method-value">
+            <a href="mailto:trasherpamore@gmail.com">trasherpamore@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-label">Phone</div>
+          <div class="contact-method-value">
+            <a href="tel:+639634054807">+63 963 405 4807</a>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-label">WhatsApp</div>
+          <div class="contact-method-value">
+            <a href="https://wa.me/639634054807" target="_blank">+63 963 405 4807</a>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-label">Viber</div>
+          <div class="contact-method-value">
+            <a href="viber://contact?number=639634054807" target="_blank">+63 963 405 4807</a>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-label">Telegram</div>
+          <div class="contact-method-value">
+            <a href="https://t.me/+639634054807" target="_blank">+63 963 405 4807</a>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-label">LinkedIn</div>
+          <div class="contact-method-value">
+            <a href="https://linkedin.com/in/trashepamore" target="_blank">trashepamore</a>
+          </div>
+        </div>
+      </div>
       <div class="contact-location">Brgy. Lumangbayan, Santa Cruz, Occidental Mindoro</div>
     </div>
   </section>

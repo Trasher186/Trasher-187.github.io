@@ -436,6 +436,102 @@
       z-index: 0;
       bottom: 100px; left: -100px;
     }
+
+    /* PROFILE SECTION */
+    #profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+      margin: 4rem auto;
+    }
+    .profile-image-wrap {
+      position: relative;
+      flex: 0 1 300px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.3s forwards;
+    }
+    .profile-image-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 8px;
+      opacity: 0.1;
+      z-index: -1;
+    }
+    .profile-image-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      opacity: 0.5;
+    }
+    .profile-image {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .profile-image-wrap:hover .profile-image {
+      transform: scale(1.02);
+    }
+    .profile-content {
+      flex: 1;
+      min-width: 300px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.5s forwards;
+    }
+    .profile-intro {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+    .profile-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .profile-title {
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+    }
+    .profile-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .highlight-item {
+      padding: 1rem;
+      background: rgba(0, 229, 160, 0.05);
+      border: 1px solid rgba(0, 229, 160, 0.2);
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+    .highlight-label {
+      color: var(--muted);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.3rem;
+    }
+    .highlight-value {
+      color: var(--accent);
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -449,7 +545,7 @@
   <nav>
     <div class="nav-logo">SMT</div>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
+      <li><a href="#profile">Profile</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -506,6 +602,38 @@
       <span class="marquee-item">CapCut Editing</span>
     </div>
   </div>
+
+  <!-- PROFILE SECTION -->
+  <section id="profile" class="reveal">
+    <div class="profile-image-wrap">
+      <img src="images/profile.jpg" alt="Sherwin M. Torreliza" class="profile-image"/>
+    </div>
+    <div class="profile-content">
+      <div class="profile-title">About Me</div>
+      <div class="profile-name">Sherwin M. Torreliza</div>
+      <p class="profile-intro">
+        A 29-year-old IT professional from Santa Cruz, Occidental Mindoro. I am passionate about building digital solutions that solve real problems using modern web technologies and AI-assisted development.
+      </p>
+      <div class="profile-highlights">
+        <div class="highlight-item">
+          <div class="highlight-label">Education</div>
+          <div class="highlight-value">BS Information Technology</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-label">Age</div>
+          <div class="highlight-value">29 years old</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-label">Location</div>
+          <div class="highlight-value">Brgy. Lumangbayan, Occ. Mindoro</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-label">Availability</div>
+          <div class="highlight-value">Open for Freelance</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ABOUT -->
   <section id="about">
